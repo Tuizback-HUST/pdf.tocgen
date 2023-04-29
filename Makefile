@@ -17,10 +17,10 @@ tocgen-demo: # a demo of tocgen
 	@poetry run pdftocgen ./spec/files/level2.pdf < ./recipes/default_latex.toml
 
 install: # set up non-dev dependencies
-	poetry install --no-dev
+	@poetry install --no-dev
 
 dev: # set up dev dependencies
-	poetry install
+	@poetry install
 
 publish: test # publish package to pypi
 	poetry publish --build
